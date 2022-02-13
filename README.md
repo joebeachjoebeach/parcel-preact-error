@@ -22,3 +22,13 @@ Server running at http://localhost:1234
     2 |   return <div>This is content</div>;
     3 | }
 ```
+
+## Workaround
+
+You can get around this issue by adding an entry for `preact/jsx-dev-runtime` in `package.json`'s `alias` field. For example:
+
+```
+"alias": {
+    "preact/jsx-dev-runtime": "preact/jsx-runtime/dist/jsxRuntime.module.js"
+}
+```
